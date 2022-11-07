@@ -46,7 +46,9 @@ public class Warehouse {
      * @param demand Initial demand of the item to add
      */
     private void addToEnd(int id, String name, int stock, int day, int demand) {
-        // IMPLEMENT THIS METHOD
+            
+        lol    
+
     }
 
     /**
