@@ -47,7 +47,7 @@ public class Warehouse {
      */
     private void addToEnd(int id, String name, int stock, int day, int demand) {
             
-        lol    lll
+        lol    lll sss
 
     }
 
