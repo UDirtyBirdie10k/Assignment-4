@@ -46,8 +46,27 @@ public class Warehouse {
      * @param demand Initial demand of the item to add
      */
     private void addToEnd(int id, String name, int stock, int day, int demand) {
+
+        StdIn.setFile("addtoend.in");
+        int fileLength = StdIn.readInt();
             
-        int x = 1;
+            for(int i = 0; i < fileLength; i++){
+                
+                int tempDay = StdIn.readInt();
+                int tempId = StdIn.readInt();
+                String tempName = StdIn.readString();
+                int tempStock = StdIn.readInt();
+                int tempDemand = StdIn.readInt();
+                int sectorLocation = tempId % 10;
+
+                Product newProduct = new Product(tempId, tempName, tempStock, tempDay, tempDemand);
+
+                sectors[sectorLocation].add(newProduct);
+
+
+
+            }
+            StdOut.setFile("addtoend.out");
 
     }
 
