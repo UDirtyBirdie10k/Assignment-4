@@ -46,16 +46,11 @@ public class Warehouse {
      * @param demand Initial demand of the item to add
      */
     private void addToEnd(int id, String name, int stock, int day, int demand) {
-
-
-        int sectorLocation = id % 10;
         
         Product newProduct = new Product(id, name, stock, day, demand);
 
-        sectors[sectorLocation].add(newProduct);
-        
-        
-            
+        sectors[id % 10].add(newProduct);
+    
 
     }
 
@@ -77,7 +72,19 @@ public class Warehouse {
      * @param id The id of the item which is about to be added
      */
     private void evictIfNeeded(int id) {
-       // IMPLEMENT THIS METHOD
+
+        if(sectors[id%10].getSize() == 5){
+
+        sectors[id%10].swap(1,5);  
+
+        sectors[id%10].deleteLast();
+        
+        sectors[id%10].sink(1);
+
+
+        }
+
+
     }
 
     /**
