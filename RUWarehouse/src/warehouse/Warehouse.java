@@ -95,7 +95,22 @@ public class Warehouse {
      * @param amount The amount by which to update the stock
      */
     public void restockProduct(int id, int amount) {
-        // IMPLEMENT THIS METHOD
+
+        
+
+        for(int i = 1; i <= sectors[id%10].getSize(); i++){
+            
+            int temp = sectors[id%10].get(i).getId();
+
+            if(temp == id){
+
+                sectors[id%10].get(i).updateStock(amount);
+                
+            }
+            
+        }
+        
+
     }
     
     /**
