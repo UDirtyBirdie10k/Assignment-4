@@ -7,7 +7,7 @@ public class Restock {
 
         int numberOfProduct = StdIn.readInt();
 
-        Warehouse x = new Warehouse();
+        Warehouse w = new Warehouse();
 
 
         for(int i = 0; i < numberOfProduct; i++){
@@ -21,25 +21,24 @@ public class Restock {
             String name = StdIn.readString();
             int stock = StdIn.readInt();
             int demand = StdIn.readInt();
-
-
-            x.addProduct(id, name, stock, day, demand); 
+    
+    
+            w.addProduct(id, name, stock, day, demand); 
 
             }
-            
+
             if(action == "restock"){
 
             int id = StdIn.readInt();
             int amount = StdIn.readInt();
-           
-            x.restockProduct(id, amount);
+            
+            w.restockProduct(id, amount);
 
             }
 
-
         }
 
-        StdOut.println(x);   
+        StdOut.println(w);   
 
 
      }
