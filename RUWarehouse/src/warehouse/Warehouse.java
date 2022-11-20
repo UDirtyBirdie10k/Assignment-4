@@ -98,19 +98,15 @@ public class Warehouse {
 
         
 
-        for(int i = 0; i < sectors[id%10].getSize(); i++){
-            
-            int temp = sectors[id%10].get(i).getId();
+        for(int i = 1; i <= sectors[id%10].getSize(); i++){
 
+            int temp = sectors[id%10].get(i).getId();
+            
             if(temp == id){
 
                 sectors[id%10].get(i).updateStock(amount);
-                
             }
-            
         }
-        
-
     }
     
     /**
